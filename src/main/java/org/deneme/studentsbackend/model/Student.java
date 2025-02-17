@@ -6,7 +6,6 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     @Column(name = "student_name")
     private String studentName;
     @Column(name = "student_surname")
@@ -18,7 +17,6 @@ public class Student {
     private String className;
 
     public Student () {
-
     }
     public Student(String studentName, String studentSurname, Integer studentId, String className) {
         this.studentName = studentName;
@@ -57,6 +55,4 @@ public class Student {
     public void setClassName(String className){
         this.className = className;
     }
-
-
 }
