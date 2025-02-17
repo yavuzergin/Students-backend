@@ -52,7 +52,7 @@ public class StudentController {
         return ResponseEntity.ok(updatedStudent);
     }
 
-    @DeleteMapping("/student/{id}")
+    @DeleteMapping("/students/{id}")
     public ResponseEntity<Map<String,Boolean>> deleteStudent(@PathVariable long id) {
         Student student = studentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Student can not find yanlış oldu cümle" + id));
         studentRepository.delete(student);
